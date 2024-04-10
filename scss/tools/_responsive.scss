@@ -1,0 +1,51 @@
+@function break-point( $bp ) {
+    @return map-get( $breakpoints, $bp );
+}
+
+@mixin responsive($names: ()) {
+    @each $name in $names {
+        @if map-has-key($breakpoints-max, $name) {
+            @media #{inspect(map-get($breakpoints-max, $name))} {
+                @content;
+            }
+        } @else {
+            @warn "Unfortunately, no value could be retrieved for `#{$name}`.";
+        }
+    }
+}
+
+@mixin responsive-min($names: ()) {
+    @each $name in $names {
+        @if map-has-key($breakpoints-min, $name) {
+            @media #{inspect(map-get($breakpoints-min, $name))} {
+                @content;
+            }
+        } @else {
+            @warn "Unfortunately, no value could be retrieved for `#{$name}`.";
+        }
+    }
+}
+
+@mixin responsive-mobile($names: ()) {
+    @each $name in $names {
+        @if map-has-key($breakpoints-max, $name) {
+            @media #{inspect(map-get($breakpoints-max, $name))} {
+                @content;
+            }
+        } @else {
+            @warn "Unfortunately, no value could be retrieved for `#{$name}`.";
+        }
+    }
+}
+
+@mixin responsive-desktop($names: ()) {
+    @each $name in $names {
+        @if map-has-key($breakpoints-min, $name) {
+            @media #{inspect(map-get($breakpoints-min, $name))} {
+                @content;
+            }
+        } @else {
+            @warn "Unfortunately, no value could be retrieved for `#{$name}`.";
+        }
+    }
+}

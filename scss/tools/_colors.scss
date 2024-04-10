@@ -1,0 +1,67 @@
+@mixin text-colors($name, $colors, $isStartWithZero: false ) {
+    @if length($colors) > 0 {
+        @each $color in $colors {
+            @if $isStartWithZero {
+                .u-text-#{$name}-#{index($colors, $color) - 1}0 {
+                    color: $color;
+                }    
+            } @else {
+                .u-text-#{$name}-#{index($colors, $color)}0 {
+                    color: $color;
+                }
+            }
+        }
+    }
+}
+
+@mixin bg-colors($name, $colors, $isStartWithZero: false) {
+    @if length($colors) > 0 {
+        @each $color in $colors {
+            @if $isStartWithZero {
+                .u-bg-#{$name}-#{index($colors, $color) - 1}0 {
+                    background-color: $color;
+                }    
+            } @else {
+                .u-bg-#{$name}-#{index($colors, $color)}0 {
+                    background-color: $color;
+                }
+            }
+        }
+    }
+}
+
+@mixin bg-generics ($name, $colors) {
+    @if (length($colors)) {
+        @each $color in $colors {
+            .u-bg-#{$name}-#{index($colors, $color)} {
+                background-color: $color;
+            }
+        }
+    }
+}
+
+@mixin text-generics($name, $colors) {
+    @if (length($colors)) {
+        @each $color in $colors {
+            .u-text-#{$name}-#{index($colors, $color)} {
+                color: $color;
+            }
+        }
+    }
+}
+
+@mixin bc-generics($name, $colors) {
+    @if (length($colors)) {
+        @each $color in $colors {
+            .u-bc-#{$name}-#{index($colors, $color)} {
+                border: 0.1rem solid $color;
+            }
+        }
+    }
+}
+
+@mixin bc-generics-single($name, $color) {
+    .u-bc-#{$name} {
+        border: 0.1rem solid $color;
+    }
+}

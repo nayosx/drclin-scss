@@ -1,0 +1,35 @@
+.c-home-page {
+    background-image: url('https://drclin.website/images/cropped-jason-leung-WXH2f1NTxMg-unsplash.jpg');
+    background-repeat: no-repeat;
+    min-height: unset;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+
+    .c-hero {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0,0,0,0.7);
+    }
+}
+
+.o-grid {
+    &__col-6 {
+        &.c-home-inverted {
+            @include responsive(md) {
+                &:nth-child(0) {
+                    order: 0;
+                }
+    
+                &:nth-child(1) {
+                    order: 1;
+                  }
+            }
+        }
+    }
+}

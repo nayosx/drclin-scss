@@ -1,0 +1,41 @@
+@mixin no-margin($margin-prop) {
+    @each $size in $breakpointsnames {
+        @include responsive($size) {
+            &--#{$size}-none {
+                #{$margin-prop}: 0;
+            }
+        }
+    }
+}
+
+@mixin no-padding($padding-prop) {
+    @each $size in $breakpointsnames {
+        @include responsive($size) {
+            &--#{$size}-none {
+                #{$padding-prop}: 0;
+            }
+        }
+    }
+}
+
+@mixin image-icon($name: '', $sizes) {
+    @if (length($sizes)) {
+        @each $class-name, $size in $sizes {
+            .#{$name}#{$class-name} {
+                max-width: #{$size}rem;
+            }
+        }
+    }
+}
+
+@mixin set-circle-wh($prefix, $icons-map) {
+    @if (length($icons-map)) {
+        @each $size-key, $size-value in $icons-map {
+          $new-size-key: #{$prefix}#{$size-key};
+          .#{$new-size-key} {
+            width: #{$size-value}rem;
+            height: #{$size-value}rem;
+          }
+        }
+    }
+  }

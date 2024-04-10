@@ -1,0 +1,105 @@
+.mat-toolbar-row {
+    &.u-mobile-none {
+        @include responsive(md) {
+            display: none;
+        }
+    }
+}
+.u-mobile-none {
+    display: block;
+
+    &__d-flex {
+        display: flex;
+    }
+
+    &__d-grid {
+        display: grid;
+    }
+
+    @include responsive(md) {
+        display: none;
+    }
+}
+
+.u-desktop-none {
+    display: none;
+
+    @include responsive(md) {
+        display: block;
+
+        &__d-flex {
+            display: flex;
+        }
+
+        &__d-grid {
+            display: grid;
+        }
+    }
+}
+
+.u-desktop-mobile-none {
+    display: none;
+}
+
+.u-d-flex {
+    display: flex;
+    &--gapx16 {
+        gap: 1.6rem;
+    }
+
+    &--i {
+        display: inline-flex;
+    }
+
+    &--col {
+        flex-direction: column;
+    }
+      
+    &--row {
+        flex-direction: row;
+    }
+}
+
+.u-justify-center {
+    justify-content: center;
+}
+
+.u-justify-between {
+  justify-content: space-between;
+}
+
+.u-align-center,
+.u-item-center {
+  align-items: center;
+}
+
+.u-justify-end {
+    justify-content: flex-end;
+}
+
+.u-center-item-inline {
+    display: inline-flex;
+    align-items: center;
+}
+
+.u-center-ja {
+    justify-content: center;
+    align-items: center;
+}
+
+.u-d-flex-spacer {
+    flex-grow: 1;
+}
+
+.u-w100p {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.u-d-block {
+    display: block;
+
+    &--min-w600 {
+        min-width: 60rem;
+    }
+}

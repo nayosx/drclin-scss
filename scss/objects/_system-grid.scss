@@ -1,0 +1,48 @@
+.o-container,
+.o-wrapper {
+    padding: 0 $spacer 0 $spacer;
+
+    &--max {
+        max-width: $max-width;
+        margin: 0 auto;
+    }
+
+    &--pd-all {
+        padding: $spacer;
+    }
+}
+
+.o-grid {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: $spacer;
+    margin-bottom: $spacer;
+
+    &--max {
+        max-width: $max-width;
+        margin: 0 auto;
+        margin-bottom: $spacer;
+    }
+
+    &--no-mb {
+        margin-bottom: 0;
+    }
+
+    @for $size from 0 through $grid-columns {
+        &__col-#{$size} {
+            grid-column: span $size;
+
+            @include responsive(md) {
+                grid-column: span 12;
+
+                &--max-480 {
+                    max-width: 48rem;
+                    box-sizing: border-box;
+                    width: 100%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

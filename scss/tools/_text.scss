@@ -1,0 +1,17 @@
+@mixin paragraph($size, $line-height, $weight-name: regular, $style: normal) {
+    font-size: $size;
+    line-height: $line-height;
+    margin: 0;
+    font-weight: map-get($font-weights, $weight-name);
+    font-style: $style;
+}
+
+@mixin font-sizes($name: '', $font-sizes) {
+    @if (length($font-sizes)) {
+        @each $class-name, $size in $font-sizes {
+            .#{$name}#{$class-name} {
+                font-size: #{$size}rem;
+            }
+        }
+    }
+}

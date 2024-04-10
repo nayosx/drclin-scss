@@ -1,0 +1,251 @@
+.u-r-caption {
+    @include paragraph(1rem, 2rem, 'regular');
+}
+
+.u-r-body-s {
+    @include paragraph(1.2em, 2.2rem, 'regular');
+}
+
+.u-r-body-m {
+    @include paragraph(1.4rem, 2.4rem, 'regular');
+
+    @include responsive(md) {
+        @include paragraph(1.6rem, 2.6rem, 'regular');
+    }
+
+    @include responsive(sm) {
+        @include paragraph(1.4rem, 2.4rem, 'regular');
+    }
+}
+
+.u-r-variant-s {
+    @include paragraph(1.6rem, 2.6rem, 'regular');
+
+    @include responsive(md) {
+        @include paragraph(1.8rem, 2.8rem, 'regular');
+    }
+
+    @include responsive(sm) {
+        @include paragraph(1.6rem, 2.6rem, 'regular');
+    }
+}
+
+.u-r-variant-m {
+    @include paragraph(2rem, 2.8rem, 'regular');
+
+    @include responsive(md) {
+        @include paragraph(2rem, 3rem, 'regular');
+    }
+
+    @include responsive(sm) {
+        @include paragraph(2rem, 2.8rem, 'regular');
+    }
+}
+
+.u-r-caption,
+.u-r-body-s,
+.u-r-body-m,
+.u-r-variant-s,
+.u-r-variant-m,
+.u-r-pg {
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.u-m-variant-xs {
+    @include paragraph(1rem, 1.8rem, 'medium');
+}
+
+.u-m-body-s {
+    @include paragraph(1.2rem, 2.2rem, 'medium');
+}
+
+.u-m-variant-s {
+    @include paragraph(1.4rem, 2.4rem, 'medium');
+}
+
+.u-m-variant-m {
+    @include paragraph(1.6rem, 2.6rem, 'medium');
+}
+
+.u-m-subtitle {
+    @include paragraph(2.4rem, 3.4rem, 'medium');
+}
+
+.u-m-variant-xs,
+.u-m-body-s,
+.u-m-variant-s,
+.u-m-variant-m,
+.u-m-subtitle,
+.u-m-pg {
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+.u-sb-body-s {
+    @include paragraph(1.2rem, 2.2rem, 'semi-bold');
+}
+
+.u-sb-body-sm {
+    @include paragraph(1.3rem, 1.75rem, 'semi-bold');
+    @include responsive(md) {
+        @include paragraph(1.3rem, 1.75rem, 'semi-bold');
+    }
+    @include responsive(sm) {
+        @include paragraph(0.9rem, 1.75rem, 'semi-bold');
+    }
+
+}
+
+.u-sb-body-m {
+    @include paragraph(1.4rem, 2.4rem, 'semi-bold');
+}
+
+.u-sb-variant-s {
+    @include paragraph(1.6rem, 2.6rem, 'semi-bold');
+}
+
+.u-sb-variant-m {
+    @include paragraph(2rem, 3.2rem, 'semi-bold');
+
+    @include responsive(md) {
+        @include paragraph(2rem, 3.4rem, 'semi-bold');
+    }
+
+    @include responsive(sm) {
+        @include paragraph(2rem, 2.8rem, 'semi-bold');
+    }
+}
+
+.u-sb-body-s,
+.u-sb-body-m,
+.u-sb-variant-s,
+.u-sb-variant-m,
+.u-sb-pg {
+    font-weight: 600;
+    font-style: normal;
+}
+
+.u-b-caption {
+    @include paragraph(1.2rem, 2rem, 'bold');
+
+    @include responsive(md) {
+        @include paragraph(1rem, 2rem, 'bold');
+    }
+}
+
+.u-b-menu {
+    @include paragraph(1.4rem, 2.2rem, 'bold');
+
+    @include responsive(sm) {
+        @include paragraph(1.2rem, 2.2rem, 'bold');
+    }
+}
+
+.u-b-subtitle-s {
+    @include paragraph(1.6rem, 2.6rem, 'bold');
+}
+
+.u-b-subtitle-m {
+    @include paragraph(2.4rem, 3.4rem, 'bold');
+
+    @include responsive(md) {
+        @include paragraph(2rem, 3.2rem, 'bold');
+    }
+
+    @include responsive(sm) {
+        @include paragraph(1.8rem, 2.8rem, 'bold');
+    }
+}
+
+.u-b-title-s {
+    @include paragraph(2.6rem, 3.6rem, 'bold');
+
+    @include responsive(md) {
+        @include paragraph(2.2rem, 3.4rem, 'bold');
+    }
+
+    @include responsive(sm) {
+        @include paragraph(2rem, 2.8rem, 'bold');
+    }
+}
+
+.u-b-title-m {
+    @include paragraph(3.6rem, 4.6rem, 'bold');
+
+    @include responsive(md) {
+        @include paragraph(2.4rem, 3.4rem, 'bold');
+    }
+
+    @include responsive(sm) {
+        @include paragraph(2.2rem, 3.4rem, 'bold');
+    }
+}
+
+.u-b-display-s {
+    @include paragraph(4rem, 5rem, 'bold');
+
+    @include responsive(md) {
+        @include paragraph(3.2rem, 4.2rem, 'bold');
+    }
+
+    @include responsive(sm) {
+        @include paragraph(2.6rem, 3.8rem, 'bold');
+    }
+}
+
+.u-b-display-m {
+    @include paragraph(4.6rem, 5.6rem, 'bold');
+
+    @include responsive(md) {
+        @include paragraph(3.4rem, 4.4rem, 'bold');
+    }
+
+    @include responsive(sm) {
+        @include paragraph(2.8rem, 4rem, 'bold');
+    }
+}
+
+.u-b-display-l {
+    @include paragraph(5.4rem, 6.5rem, 'bold');
+
+    @include responsive(md) {
+        @include paragraph(4rem, 5rem, 'bold');
+    }
+
+    @include responsive(sm) {
+        @include paragraph(3rem, 4.8rem, 'bold');
+    }
+}
+
+.u-b-caption, 
+.u-b-menu, 
+.u-b-subtitle-s,
+.u-b-subtitle-m,
+.u-b-title-s,
+.u-b-display-s,
+.u-b-display-m
+.u-b-display-l,
+.u-b-pg {
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+.u-text-center {
+    text-align: center;
+}
+
+.u-text-justify {
+    text-align: justify;
+}
+
+.u-text-left {
+    text-align: left;
+}
+
+.u-text-right {
+    text-align: right;
+}

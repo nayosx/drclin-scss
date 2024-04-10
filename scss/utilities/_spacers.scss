@@ -1,0 +1,71 @@
+@for $size from 0 through 16 {
+    .u-mt-#{$size} {
+        margin-top: #{$size}rem;
+        @include no-margin('margin-top');
+    }
+
+    .u-mb-#{$size} {
+        margin-bottom: #{$size}rem;
+        @include no-margin('margin-bottom');
+    }
+
+    .u-ml-#{$size} {
+        margin-left: #{$size}rem;
+        @include no-margin('margin-left');
+    }
+
+    .u-mr-#{$size} {
+        margin-right: #{$size}rem;
+        @include no-margin('margin-right');
+    }
+
+    .u-pt-#{$size} {
+        padding-top: #{$size}rem;
+        @include no-padding('padding-top');
+    }
+
+    .u-pb-#{$size} {
+        padding-bottom: #{$size}rem;
+        @include no-padding('padding-bottom');
+    }
+
+    .u-pl-#{$size} {
+        padding-left: #{$size}rem;
+        @include no-padding('padding-left');
+    }
+
+    .u-pr-#{$size} {
+        padding-right: #{$size}rem;
+        @include no-padding('padding-right');
+    }
+
+    .u-pd-all-#{$size} {
+        padding: #{$size}rem;
+    }
+}
+
+
+.u-mb-32 {
+    margin-bottom: 3.2rem;
+}
+
+.u-pr,
+.u-pl,
+.u-pt,
+.u-pb,
+
+.u-mr,
+.u-ml,
+.u-mt,
+.u-mb {
+
+    @include responsive-desktop(md) {
+        &--desktop-none {
+            padding: 0;
+        }
+    }
+}
+
+.u-pd-all-1 {
+    padding: 1rem;
+}

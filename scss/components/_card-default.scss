@@ -1,0 +1,14 @@
+.c-card-default {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
+    border-radius: 0.5rem;
+    position: relative;
+
+    &--max-480 {
+        @include responsive(md) {
+            max-width: 48rem;
+            box-sizing: border-box;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}

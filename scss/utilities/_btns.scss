@@ -1,0 +1,15 @@
+.mdc-button {
+    &.btn {
+        &--big {
+            height: 5.2rem;
+            padding: 2.4rem 3rem;
+        }
+
+        @include responsive(xs) {
+            &--big {
+                height: 4.2rem;
+                padding: 1.4rem 2rem;
+            }
+        }
+    }
+}

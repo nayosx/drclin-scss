@@ -1,0 +1,18 @@
+footer {
+    padding: 2.4rem;
+
+    .c-social-network {
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        li {
+            width: 30rem;
+        }
+
+        @include responsive(md) {
+            flex-direction: column;
+        }
+    }
+}
